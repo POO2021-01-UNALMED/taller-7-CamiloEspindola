@@ -3,8 +3,7 @@ package comunicacion;
 public class Fabula extends Escrito {
 	private String ensenanza;
 	private String interpretacion;
-	Pictograma objP;
-	Escrito objE;
+	
 	
 	
 	public Fabula(String origen, String titulo, String autor, int paginas, String ensenanza, String interpretacion) {
@@ -14,7 +13,7 @@ public class Fabula extends Escrito {
 	}
 
 	public int palabrasTotales(int num) {
-		return num*objE.getPaginas();
+		return num*super.getPaginas();
 	}
 	
 	public String interpretacion() {
@@ -22,10 +21,10 @@ public class Fabula extends Escrito {
 	}
 	
 	public String toString() {
-		return objP.getOrigen()+"\n"+
-			   objE.getTitulo()+"\n"+
-			   objE.getAutor()+"\n"+
-			   objE.getPaginas()+"\n"+
+		return super.getOrigen()+"\n"+
+			   super.getTitulo()+"\n"+
+			   super.getAutor()+"\n"+
+			   super.getPaginas()+"\n"+
 			   ensenanza;
 	}
 

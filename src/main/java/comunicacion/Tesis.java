@@ -7,8 +7,7 @@ public class Tesis extends Escrito {
 	private String conclusion;
 	private String referencias;
 	private String interpretacion;
-	Pictograma objP;
-	Escrito objE;
+	
 	
 	
 	public Tesis(String origen, String titulo, String autor, int paginas, String idea, String[] argumentos,
@@ -21,16 +20,16 @@ public class Tesis extends Escrito {
 		this.interpretacion = interpretacion;
 	}
 	public int palabrasTotales(int num) {
-		return num*objE.getPaginas()*5;
+		return num*super.getPaginas()*5;
 	}
 	public String interpretacion() {
 		return interpretacion;
 	}
 	public String toString() {
-		return objP.getOrigen()+"\n"+
-				objE.getTitulo()+"\n"+
-				objE.getAutor()+"\n"+
-				objE.getPaginas()+"\n"+
+		return  super.getOrigen()+"\n"+
+				super.getTitulo()+"\n"+
+				super.getAutor()+"\n"+
+				super.getPaginas()+"\n"+
 				idea+"\n"+
 				argumentos.length+"\n"+
 				conclusion+"\n"+

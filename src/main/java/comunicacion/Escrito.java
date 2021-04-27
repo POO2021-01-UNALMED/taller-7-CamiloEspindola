@@ -24,7 +24,7 @@ public abstract class Escrito extends Pictograma{
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	public int getPaginas() {
+	public  int getPaginas() {
 		return paginas;
 	}
 	public void setPaginas(int paginas) {

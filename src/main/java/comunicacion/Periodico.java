@@ -4,9 +4,6 @@ public class Periodico extends Escrito {
 	private String fecha;
 	private String primicia;
 	private String interpretacion;
-	Pictograma objP;
-	Escrito objE;
-	
 	
 	public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia,
 			String interpretacion) {
@@ -16,16 +13,16 @@ public class Periodico extends Escrito {
 		this.interpretacion = interpretacion;
 	}
 	public int palabrasTotales(int num) {
-		return num*objE.getPaginas()*10;
+		return num*super.getPaginas()*10;
 	}
 	public String interpretacion() {
 		return interpretacion;
 	}
 	public String toString() {
-		return objP.getOrigen()+"\n"+
-				objE.getTitulo()+"\n"+
-				objE.getAutor()+"\n"+
-				objE.getPaginas()+"\n"+
+		return  super.getOrigen()+"\n"+
+				super.getTitulo()+"\n"+
+				super.getAutor()+"\n"+
+				super.getPaginas()+"\n"+
 				fecha+"\n"+
 				primicia;
 		

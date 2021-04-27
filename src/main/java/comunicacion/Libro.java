@@ -5,8 +5,7 @@ public class Libro extends Escrito {
 	private String editorial;
 	private String edicion;
 	private String interpretacion;
-	Pictograma objP;
-	Escrito objE;
+
 	
 	
 	public Libro(String origen, String titulo, String autor, int paginas, String co_autor, String editorial,
@@ -19,7 +18,7 @@ public class Libro extends Escrito {
 	}
 
 	public int palabrasTotales(int num) {
-		return num*objE.getPaginas()*2;
+		return num*super.getPaginas()*2;
 	}
 	
 	public String interpretacion() {
@@ -27,10 +26,10 @@ public class Libro extends Escrito {
 	}
 	
 	public String toString() {	
-		return objP.getOrigen()+"\n"+
-				objE.getTitulo()+"\n"+
-				objE.getAutor()+"\n"+
-				objE.getPaginas()+"\n"+
+		return  super.getOrigen()+"\n"+
+				super.getTitulo()+"\n"+
+				super.getAutor()+"\n"+
+				super.getPaginas()+"\n"+
 				co_autor+"\n"+
 				editorial+"\n"+
 				edicion;
